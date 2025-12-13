@@ -13,15 +13,453 @@
 
 
 
+<header>
+    <div id="solar-system">
+        <!-- Stars -->
+        <div id="stars"></div>
+
+        <!-- Sun -->
+        <div class="sun"></div>
+
+        <!-- Mercury -->
+        <div class="orbit" style="width: 150px; height: 150px; top: calc(50% - 75px); left: calc(50% - 75px); animation: rotate 6s linear infinite;">
+            <div class="planet" style="width: 10px; height: 10px; background: #888; top: 0; left: calc(50% - 5px);"></div>
+        </div>
+
+        <!-- Earth + Moon -->
+        <div class="orbit" style="width: 250px; height: 250px; top: calc(50% - 125px); left: calc(50% - 125px); animation: rotate 12s linear infinite;">
+            <div class="planet" style="width: 20px; height: 20px; background: #49a0d8; position: absolute; top: 0; left: calc(50% - 10px);">
+                <div class="moon-orbit">
+                    <div class="moon"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mars -->
+        <div class="orbit" style="width: 350px; height: 350px; top: calc(50% - 175px); left: calc(50% - 175px); animation: rotate 20s linear infinite;">
+            <div class="planet" style="width: 15px; height: 15px; background: #d84949; top: 0; left: calc(50% - 7.5px);"></div>
+        </div>
+
+        <!-- Jupiter -->
+        <div class="orbit" style="width: 450px; height: 450px; top: calc(50% - 225px); left: calc(50% - 225px); animation: rotate 30s linear infinite;">
+            <div class="planet" style="width: 25px; height: 25px; background: #e3e36a; top: 0; left: calc(50% - 12.5px);"></div>
+        </div>
+
+        <!-- Saturn -->
+        <div class="orbit" style="width: 550px; height: 550px; top: calc(50% - 275px); left: calc(50% - 275px); animation: rotate 45s linear infinite;">
+            <div class="planet" style="width: 40px; height: 40px; background: #b98b3c; top: 0; left: calc(50% - 20px);"></div>
+        </div>
+    </div>
+
+    <div class="content-overlay">
+        <div class="text-container">
+            <h1>Solar System</h1>
+            <p>Explore the wonders of our cosmic neighborhood. The solar system consists of the Sun and the celestial objects bound to it by gravity, including planets.</p>
+        </div>
+    </div>
+
+    <!-- Scroll button outside the text -->
+    <button id="scroll-btn">Scroll Down</button>
+</header>
+<!-- Body section -->
+
+<section id="planet-section">
+    <div id="planet-info">
+    <div class="planets-container">
+
+        <!-- Mercury -->
+        <div class="planet-card">
+            <div id="mercury" class="planet-animation"></div>
+            <div class="planet-info" div id="mercury-info">
+                <h2 class="planet-name">Mercury</h2>
+                <p class="planet-description">
+                    The smallest planet in our solar system and closest to the Sun, Mercury is only slightly larger than Earth's Moon.
+                </p>
+                <div class="planet-facts">
+                    <div class="fact-item">
+                        <span class="fact-label">Diameter:</span>
+                        <span class="fact-value">4,880 km</span>
+                    </div>
+                    <div class="fact-item">
+                        <span class="fact-label">Orbit Period:</span>
+                        <span class="fact-value">88 Earth days</span>
+                    </div>
+                    <div class="fact-item">
+                        <span class="fact-label">Surface Temp:</span>
+                        <span class="fact-value">-173°C to 427°C</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Venus -->
+        <div class="planet-card">
+            <div id="venus" class="planet-animation"></div>
+            <div class="planet-info">
+                <h2 class="planet-name">Venus</h2>
+                <p class="planet-description">
+                    Similar in size to Earth, Venus spins slowly in the opposite direction from most planets with a toxic atmosphere.
+                </p>
+                <div class="planet-facts">
+                    <div class="fact-item">
+                        <span class="fact-label">Diameter:</span>
+                        <span class="fact-value">12,104 km</span>
+                    </div>
+                    <div class="fact-item">
+                        <span class="fact-label">Orbit Period:</span>
+                        <span class="fact-value">225 Earth days</span>
+                    </div>
+                    <div class="fact-item">
+                        <span class="fact-label">Surface Temp:</span>
+                        <span class="fact-value">462°C</span>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
 
+        <!-- Mars -->
+        <div class="planet-card">
+            <div id="mars" class="planet-animation"></div>
+            <div class="planet-info">
+                <h2 class="planet-name">Mars</h2>
+                <p class="planet-description">
+                    The Red Planet is a dusty, cold desert world with a very thin atmosphere and seasons, polar ice caps, and more.
+                </p>
+                <div class="planet-facts">
+                    <div class="fact-item">
+                        <span class="fact-label">Diameter:</span>
+                        <span class="fact-value">6,779 km</span>
+                    </div>
+                    <div class="fact-item">
+                        <span class="fact-label">Orbit Period:</span>
+                        <span class="fact-value">687 Earth days</span>
+                    </div>
+                    <div class="fact-item">
+                        <span class="fact-label">Surface Temp:</span>
+                        <span class="fact-value">-153°C to 20°C</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Jupiter -->
+        <div class="planet-card">
+            <div id="jupiter" class="planet-animation"></div>
+            <div class="planet-info">
+                <h2 class="planet-name">Jupiter</h2>
+                <p class="planet-description">
+                    More than twice as massive as all other planets combined, this gas giant has a Great Red Spot storm larger than Earth.
+                </p>
+                <div class="planet-facts">
+                    <div class="fact-item">
+                        <span class="fact-label">Diameter:</span>
+                        <span class="fact-value">139,820 km</span>
+                    </div>
+                    <div class="fact-item">
+                        <span class="fact-label">Orbit Period:</span>
+                        <span class="fact-value">12 Earth years</span>
+                    </div>
+                    <div class="fact-item">
+                        <span class="fact-label">Surface Temp:</span>
+                        <span class="fact-value">-108°C</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Saturn -->
+        <div class="planet-card">
+            <div id="saturn" class="planet-animation"></div>
+            <div class="planet-info">
+                <h2 class="planet-name">Saturn</h2>
+                <p class="planet-description">
+                    Adorned with thousands of beautiful ringlets, Saturn is unique among the planets with its spectacular ring system.
+                </p>
+                <div class="planet-facts">
+                    <div class="fact-item">
+                        <span class="fact-label">Diameter:</span>
+                        <span class="fact-value">116,460 km</span>
+                    </div>
+                    <div class="fact-item">
+                        <span class="fact-label">Orbit Period:</span>
+                        <span class="fact-value">29 Earth years</span>
+                    </div>
+                    <div class="fact-item">
+                        <span class="fact-label">Surface Temp:</span>
+                        <span class="fact-value">-139°C</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Uranus -->
+        <div class="planet-card">
+            <div id="uranus" class="planet-animation"></div>
+            <div class="planet-info">
+                <h2 class="planet-name">Uranus</h2>
+                <p class="planet-description">
+                    Uranus rotates at a nearly 90-degree angle from the plane of its orbit, appearing to roll around the Sun like a ball.
+                </p>
+                <div class="planet-facts">
+                    <div class="fact-item">
+                        <span class="fact-label">Diameter:</span>
+                        <span class="fact-value">50,724 km</span>
+                    </div>
+                    <div class="fact-item">
+                        <span class="fact-label">Orbit Period:</span>
+                        <span class="fact-value">84 Earth years</span>
+                    </div>
+                    <div class="fact-item">
+                        <span class="fact-label">Surface Temp:</span>
+                        <span class="fact-value">-197°C</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Neptune -->
+        <div class="planet-card">
+            <div id="neptune" class="planet-animation"></div>
+            <div class="planet-info">
+                <h2 class="planet-name">Neptune</h2>
+                <p class="planet-description">
+                    Dark, cold, and whipped by supersonic winds, Neptune is the only planet in our solar system not visible to the naked eye.
+                </p>
+                <div class="planet-facts">
+                    <div class="fact-item">
+                        <span class="fact-label">Diameter:</span>
+                        <span class="fact-value">49,244 km</span>
+                    </div>
+                    <div class="fact-item">
+                        <span class="fact-label">Orbit Period:</span>
+                        <span class="fact-value">165 Earth years</span>
+                    </div>
+                    <div class="fact-item">
+                        <span class="fact-label">Surface Temp:</span>
+                        <span class="fact-value">-201°C</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+  <div class="planet-card">
+            <div id="sun" class="planet-animation"></div>
+            <div class="planet-info" div id="sun-info">
+                <h2 class="planet-name">The sun</h2>
+                <p class="planet-description">
+The Sun is a massive, glowing ball of hot gas at the center of our solar system. It is mostly made of hydrogen and helium
+                </p>
+                <div class="planet-facts">
+                    <div class="fact-item">
+                        <span class="fact-label">Diameter:</span>
+                        <span class="fact-value"> 1,392,700 km</span>
+                    </div>
+                    <div class="fact-item">
+                        <span class="fact-label">Orbit Period:</span>
+                        <span class="fact-value">225 to 250 million Earth years</span>
+                    </div>
+                    <div class="fact-item">
+                        <span class="fact-label">Surface Temp:</span>
+                        <span class="fact-value"> 5,500°C to 9,932°F</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+     <div class="planet-card">
+      <div id="moon" class="planet-animation"></div>
+      <div class="planet-info">
+        <h2 class="planet-name">Moon</h2>
+        <p class="planet-description">
+        From lighting up our skies to preserving evidence of our solar system’s history, Earth’s closest neighbor plays a pivotal role in the study of our planet and beyond.
+        </p>
+        <div class="planet-facts">
+          <div class="fact-item">
+            <span class="fact-label">Diameter:</span>
+            <span class="fact-value">3 474,8 km</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Orbit Period:</span>
+            <span class="fact-value">27 days</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Surface Temp:</span>
+            <span class="fact-value">-298°F to 260°F</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+     <div class="planet-card">
+      <div id="earth" class="planet-animation"></div>
+      <div class="planet-info">
+        <h2 class="planet-name">Earth</h2>
+        <p class="planet-description">
+Earth is the third planet from the Sun and the only astronomical object known to harbor life. This is enabled by Earth being an ocean world.
+        </p>
+        <div class="planet-facts">
+          <div class="fact-item">
+            <span class="fact-label">Diameter:</span>
+            <span class="fact-value">12 756 km</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Orbit Period:</span>
+            <span class="fact-value">365 jours</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Surface Temp:</span>
+            <span class="fact-value">15°C (59°F).</span>
+          </div>
+        </div>
+      </div>
+</div>
 
 
-<script type="module">
-  import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js";
-  const scene = new THREE.Scene();
+     <div class="planet-card">
+      <div id="earth-clouds" class="planet-animation"></div>
+      <div class="planet-info">
+        <h2 class="planet-name">Earth clouds</h2>
+        <p class="planet-description">
+Clouds can both warm and cool the Earth's surface, but overall, they tend to have a net cooling effect.        </p>
+        <div class="planet-facts">
+          <div class="fact-item">
+            <span class="fact-label">Diameter:</span>
+            <span class="fact-value">12,756 km</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Orbit Period:</span>
+            <span class="fact-value">27 days</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Surface Temp:</span>
+            <span class="fact-value">while lower clouds reflect sunlight</span>
+          </div>
+        </div>
+      </div>
+ </div>
+ 
+    <div class="planet-card">
+            <div id="ceres" class="planet-animation"></div>
+            <div class="planet-info" div id="sun-info">
+                <h2 class="planet-name">Ceres</h2>
+                <p class="planet-description">
+Dwarf planet Ceres is the largest object in the asteroid belt between Mars and Jupiter.
+                </p>
+                <div class="planet-facts">
+                    <div class="fact-item">
+                        <span class="fact-label">Diameter:</span>
+                        <span class="fact-value"> 950 km</span>
+                    </div>
+                    <div class="fact-item">
+                        <span class="fact-label">Orbit Period:</span>
+                        <span class="fact-value">1 682</span>
+                    </div>
+                    <div class="fact-item">
+                        <span class="fact-label">Surface Temp:</span>
+                        <span class="fact-value">  -140°C to -38°C </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="planet-card">
+            <div id="haumea" class="planet-animation"></div>
+            <div class="planet-info" div id="sun-info">
+                <h2 class="planet-name">Haumea</h2>
+                <p class="planet-description">
+Planète naine, Plutoïde, Résonance intermittente 7:12 avec Neptune, Membre principal de la famille de Hauméa.
+                </p>
+                <div class="planet-facts">
+                    <div class="fact-item">
+                        <span class="fact-label">Diameter:</span>
+                        <span class="fact-value"> 136108 km</span>
+                    </div>
+                    <div class="fact-item">
+                        <span class="fact-label">Orbit Period:</span>
+                        <span class="fact-value">283.3 Earth years</span>
+                    </div>
+                    <div class="fact-item">
+                        <span class="fact-label">Surface Temp:</span>
+                        <span class="fact-value"> 5,500°C to 9,932°F</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="planet-card">
+            <div id="makemake" class="planet-animation"></div>
+            <div class="planet-info" div id="sun-info">
+                <h2 class="planet-name">makemake</h2>
+                <p class="planet-description">
+Makemake est une planète naine qui se situe dans la Ceinture de Kuiper                </p>
+                <div class="planet-facts">
+                    <div class="fact-item">
+                        <span class="fact-label">Diameter:</span>
+                        <span class="fact-value"> 1 430  km</span>
+                    </div>
+                    <div class="fact-item">
+                        <span class="fact-label">Orbit Period:</span>
+                        <span class="fact-value"> 306 Earth years.</span>
+                    </div>
+                    <div class="fact-item">
+                        <span class="fact-label">Surface Temp:</span>
+                        <span class="fact-value">-240°C or 30K.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="planet-card">
+            <div id="eris" class="planet-animation"></div>
+            <div class="planet-info" div id="sun-info">
+                <h2 class="planet-name">Eris</h2>
+                <p class="planet-description">
+Eris is one of largest the dwarf planets in our solar system. It's about the same size as Pluto, but it's three times farther from the Sun.                </p>
+                <div class="planet-facts">
+                    <div class="fact-item">
+                        <span class="fact-label">Diameter:</span>
+                        <span class="fact-value"> 2 326 km</span>
+                    </div>
+                    <div class="fact-item">
+                        <span class="fact-label">Orbit Period:</span>
+                        <span class="fact-value">557 Earth years.</span>
+                    </div>
+                    <div class="fact-item">
+                        <span class="fact-label">Surface Temp:</span>
+                        <span class="fact-value">-243°C to -217°C</span>
+                    </div>
+                </div>
+            </div>
+
+</div>
+</div>
+</section>
+<script src="https://cdn.jsdelivr.net/npm/three@0.150.1/build/three.min.js"></script>
+<script  src="src/main.js"></script>
+
+<script>
+    // Generate stars
+const starsContainer = document.getElementById('stars');
+for(let i=0; i<150; i++){
+    const star = document.createElement('div');
+    star.classList.add('star');
+    star.style.top = Math.random() * window.innerHeight + 'px';
+    star.style.left = Math.random() * window.innerWidth + 'px';
+    star.style.width = star.style.height = Math.random()*2 + 1 + 'px';
+    star.style.animationDuration = 1 + Math.random()*3 + 's';
+    starsContainer.appendChild(star);
+}
+
+// Scroll button
+const scrollBtn = document.getElementById('scroll-btn');
+scrollBtn.addEventListener('click', () => {
+    window.scrollTo({
+        top: window.innerHeight,
+        behavior: 'smooth'
+    });
+});
 </script>
-<script type="module" src="src/main.js"></script>
     </body>
 </html>

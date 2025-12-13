@@ -1,0 +1,302 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+    background-color: #0a0a1a;
+    color: #e0e0ff;
+    overflow-x: hidden;
+}
+/* header-start */
+header {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(10, 8, 34);
+    background-color: black;
+    overflow: hidden;
+}
+#solar-system {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+}
+#stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+}
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: twinkle 2s infinite alternate;
+}
+@keyframes twinkle {
+    0% { opacity: 0.2; }
+    50% { opacity: 1; }
+    100% { opacity: 0.2; }
+}
+
+.content-overlay {
+    position: relative;
+    z-index: 2;
+    color: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none; 
+}
+.text-container {
+    background-color: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(4px);
+    padding: 2rem;
+    border-radius: 15px;
+    max-width: 850px;
+    text-align: center;
+    pointer-events: auto;    
+}
+.text-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+.text-container p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    text-align: center;
+}
+.edit-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10;
+}
+.sun {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    background: radial-gradient(circle, #fff000, #ff8000);
+    border-radius: 50%;
+    box-shadow: 0 0 80px rgba(255, 140, 0, 0.8);
+    animation: pulse 3s infinite alternate;
+    z-index: 1;
+}
+.planet {
+    position: absolute;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    z-index: 2;
+}
+.orbit {
+    position: absolute;
+    border: 1px dashed rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform-origin: center;
+    z-index: 1;
+}
+.moon-orbit {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: -10px;
+    left: -10px;
+    border-radius: 50%;
+    transform-origin: center;
+    animation: rotate 3s linear infinite;
+}
+.moon {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: #ccc;
+    border-radius: 50%;
+    top: 0;
+    left: calc(50% - 2.5px);
+}
+header {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: bgScroll 20s linear infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+}
+@keyframes bgScroll {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 100% 100%; }
+}
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+@keyframes pulse {
+    0% { box-shadow: 0 0 60px rgba(255, 140, 0, 0.8); }
+    50% { box-shadow: 0 0 100px rgba(255, 180, 50, 0.9); }
+    100% { box-shadow: 0 0 60px rgba(255, 140, 0, 0.8); }
+}
+/* Scroll button */
+#scroll-btn {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    z-index: 3;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.041);
+    backdrop-filter: blur(12px);
+    transition: background 0.3s, color 0.3s;
+}
+#scroll-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+/* header-End */
+
+/*body------------ start------------------- here --------*/
+
+#planet-section{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+    #planet-info{
+    width: 100%;
+    border-radius: 12px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: bgScroll 80s linear infinite;
+        }
+
+/*planets-container---*/
+.planets-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            padding: 1rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+
+
+        .planet-card {
+            border-radius: 20px;
+            padding: 1.5rem;
+            width: 100%;
+            max-width: 350px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid rgba(100, 100, 255, 0.1);
+                    background-color: rgba(255, 255, 255, 0.041);
+    backdrop-filter: blur(8px);
+        }
+
+        .planet-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
+        }
+
+        .planet-animation {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 1rem;
+            border-radius: 50%;
+            position: relative;
+        }
+        .planet-info {
+            padding: 1rem;
+        }
+
+        .planet-name {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            color: #7ad0ff;
+            text-align: center;
+        }
+
+        .planet-description {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .planet-facts {
+            margin-top: 1rem;
+        }
+
+        .fact-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(100, 100, 255, 0.1);
+        }
+
+        .fact-label {
+            font-weight: bold;
+            color: #7ad0ff;
+        }
+
+        .fact-value {
+            text-align: right;
+        }
+#sun {
+  animation: sunGlow 2s infinite;
+}
+
+@keyframes sunGlow {
+  0% {
+    box-shadow: 0 0 10px 5px #ffae00,
+                0 0 20px 10px #ff6f00,
+                0 0 30px 15px #ff3b00;
+  }
+  25% {
+    box-shadow: 0 0 15px 7px #ffb200,
+                0 0 25px 12px #ff7000,
+                0 0 35px 18px #ff2a00;
+  }
+  50% {
+    box-shadow: 0 0 20px 10px #ffae00,
+                0 0 30px 15px #ff6f00,
+                0 0 40px 20px #ff3b00;
+  }
+  75% {
+    box-shadow: 0 0 18px 8px #ffb200,
+                0 0 28px 14px #ff7000,
+                0 0 38px 19px #ff2a00;
+  }
+  100% {
+    box-shadow: 0 0 10px 5px #ffae00,
+                0 0 20px 10px #ff6f00,
+                0 0 30px 15px #ff3b00;
+  }
+}
