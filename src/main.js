@@ -498,3 +498,16 @@ scrollBtn.addEventListener('click', () => {
         behavior: 'smooth'
     });
 });
+
+console.log("Welcome to the Solar System Explorer! Explore the planets and enjoy the cosmic journey.");
+console.log("Created by OZ-00MS. Visit");
+console.log("the purpose 1: is animation 2d planet model rotation using css keyframes");
+console.log("the purpose 2: is install three.js use webgl for animation 3d planet model rotation");
+console.log("the purpose 3: is learn more about solar system planets and their textures");
+console.log("the purpose 4: is practice javascript coding and three.js library skills");
+console.log("the purpose 5: is create a visually appealing solar system webpage");
+console.log("the purpose 6: is enhance user experience with interactive elements");
+console.log("the purpose 7: is experiment with web graphics and rendering techniques");
+console.log("the purpose 8: is share knowledge about astronomy and space exploration");
+console.log("the purpose 9: is develop problem-solving skills through coding challenges");
+console.log("the purpose 10: is have fun while learning and creating!");
