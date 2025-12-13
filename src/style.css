@@ -300,3 +300,14 @@ header {
                 0 0 30px 15px #ff3b00;
   }
 }
+
+/* body-end */
+/* footer-start */
+footer {
+    background-color: #0a0a1a;
+    color: #e0e0ff;
+    text-align: center;
+    padding: 1rem 0;
+    border-top: 1px solid rgba(100, 100, 255, 0.1);
+    margin-top: 2rem;
+}
