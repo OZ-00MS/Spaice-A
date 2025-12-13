@@ -478,4 +478,23 @@ function animateEarthCloudsOnly() {
 }
 animateEarthCloudsOnly();
 
+    // Generate stars
+const starsContainer = document.getElementById('stars');
+for(let i=0; i<150; i++){
+    const star = document.createElement('div');
+    star.classList.add('star');
+    star.style.top = Math.random() * window.innerHeight + 'px';
+    star.style.left = Math.random() * window.innerWidth + 'px';
+    star.style.width = star.style.height = Math.random()*2 + 1 + 'px';
+    star.style.animationDuration = 1 + Math.random()*3 + 's';
+    starsContainer.appendChild(star);
+}
 
+// Scroll button
+const scrollBtn = document.getElementById('scroll-btn');
+scrollBtn.addEventListener('click', () => {
+    window.scrollTo({
+        top: window.innerHeight,
+        behavior: 'smooth'
+    });
+});
