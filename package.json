@@ -1,8 +1,27 @@
 {
+  "name": "spaicea",
+  "version": "1.0.0",
+  "description": "<p align=\"left\">\r   for planet info and solar system\r   (Three.js)<br><br></p>\r <img width=\"1034\" height=\"1462\" alt=\"Screenshot 2025-12-13 051853\" src=\"https://github.com/user-attachments/assets/a6c3c9ea-93ee-494f-a6cd-839d57d42f04\" />\r <img width=\"1036\" height=\"1528\" alt=\"Screenshot 2025-12-13 052020\" src=\"https://github.com/user-attachments/assets/45c25f88-758d-4f2b-9a2a-5a7c9f365ba7\" />\r <img width=\"1033\" height=\"731\" alt=\"Screenshot 2025-12-13 052428\" src=\"https://github.com/user-attachments/assets/a78daa30-94b6-488e-8e14-0d2d8417ae31\" />",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OZ-00MS/Spaice-A.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/OZ-00MS/Spaice-A/issues"
+  },
+  "homepage": "https://github.com/OZ-00MS/Spaice-A#readme",
   "dependencies": {
-    "three": "^0.182.0"
+    "express": "^5.2.1"
   },
   "devDependencies": {
-    "vite": "^7.2.7"
+    "nodemon": "^3.1.11"
   }
 }
